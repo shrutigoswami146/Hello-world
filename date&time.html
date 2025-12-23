@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d and t</title>
+</head>
+<body>
+    <div> </div>
+<script>
+    function updateTime(){
+        let el=document.body.children[0] ;
+        let t=new Date ;
+        el.innerText = t.toLocaleString();
+        
+    }
+    updateTime();
+    setInterval(updateTime , 1000);
+</script>
+</body>
+</html>
