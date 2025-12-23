@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        email:
+        <input type="text" placeholder="enter email" id="email">
+        <button type="submit"> submit </button>
+        <p id="error"></p>
+    </form>
+    <script>
+        let form =document.querySelector("form") ;
+        let email=doucment.getElementById("email");
+        let error=document.getElementById("error");
+        form.addEventListener("submit",function(event) {
+        event.preventDefault();
+        let el = email.value ;
+        if(el.includes("@gmail.com")){
+            alert("correct email");
+            error.innerText="";
+        }
+        else {
+            error.innerText="enter valid email";
+            error.style.color="red";
+
+        }
+    });
+    </script>
+</body>
+</html>
